@@ -25,7 +25,7 @@ const StyledHeaderMenu = styled.nav``;
 
 const List = styled.ul`
     display: flex;
-    gap: 80px;
+    gap: 25px;
 `;
 
 const ListItem = styled.li``;
