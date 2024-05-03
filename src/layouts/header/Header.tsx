@@ -4,6 +4,7 @@ import { Logo } from '../../components/logo/Logo';
 import { HeaderMenu } from './headerMenu/HeaderMenu';
 import { SocialMenu } from '../../components/socialMenu/SocialMenu';
 import { Container } from '../../components/Container';
+import { Theme } from '../../styles/Theme';
 
 const navItems = ['Home', 'Projects', 'Technologies', 'About me', 'Contact me'];
 
@@ -29,6 +30,7 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 34px 0;
+    background-color: ${Theme.color.secondBG};
     ${Container} {
         display: flex;
         align-items: center;
