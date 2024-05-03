@@ -11,7 +11,8 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <FlexWrapper flexDirection='column' justify='center' alignItems='flex-start'>
-                    <Name>Peter Kanapelka <br/> - front-end developer</Name>
+                    <Name>Petr Kanapelka</Name>
+                    <MainSlogan>"I am a frontend developer."</MainSlogan>
                     <Description>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto tenetur optio aliquam, tempore quasi pariatur voluptatum quaerat. Commodi asperiores amet et, omnis sed ad nemo autem corrupti rerum sapiente dignissimos.</Description>
                     <Link content="Let’s Begin" url='#'/>
                 </FlexWrapper>
@@ -25,15 +26,21 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     display: flex;
+    padding: 125px 0;
     ${Container} {
         display: flex;
     }
 `;
 
-const Name = styled.h1`
+const Name = styled.h2`
     font-weight: 600;
-    font-size: 40px;
+    font-size: 54px;
 `;
+
+const MainSlogan = styled.h1`
+    font-weight: 600;
+    font-size: 46px;
+`
 
 const Description = styled.p`
     margin: 15px 0 60px;
