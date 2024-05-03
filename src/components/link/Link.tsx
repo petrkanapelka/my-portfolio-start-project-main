@@ -19,5 +19,4 @@ const StyledLink = styled.a`
     font-weight: 600;
     font-size: 20px;
     border-radius: 83px;
-
 `
