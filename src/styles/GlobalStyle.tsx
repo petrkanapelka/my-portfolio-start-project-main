@@ -38,4 +38,12 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
+
+    section:nth-of-type(odd) {
+        background-color: ${Theme.color.mainBG};
+    }
+
+    section:nth-of-type(even) {
+        background-color: ${Theme.color.secondBG};
+    }
 `
