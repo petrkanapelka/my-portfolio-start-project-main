@@ -5,6 +5,7 @@ import Photo from '../../assets/images/photo.webp'
 import { Theme } from '../../styles/Theme';
 import { Container } from '../../components/Container';
 import { Link } from '../../components/link/Link';
+import { encodedSVG } from '../../assets/icons/frame';
 
 export const Main = () => {
     return (
@@ -53,7 +54,24 @@ const Description = styled.p`
 const ImageWrapper = styled.div`
   margin: 0 0 0 90px;
   display: inline-block;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 666px;
+    height: 666px;
+    background-image: url("data:image/svg+xml,${encodedSVG}");
+    background-size: cover;
+    transform: rotate(-180deg);
+
+    position: absolute;
+    left: 2px;
+    top:70px;
+    z-index: 1;
+  }
 `;
+
 
 const Image = styled.img`
   border-radius: 50px 0;
@@ -64,4 +82,6 @@ const Image = styled.img`
   background: ${Theme.color.gradient};
   background-clip: padding-box;
   padding: 3px;
+  position: relative;
+  z-index: 2;
 `;
