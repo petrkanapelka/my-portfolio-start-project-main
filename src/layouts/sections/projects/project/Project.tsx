@@ -43,7 +43,7 @@ const Image = styled.img`
     width: 500px;
     height: 280px;
     margin-bottom: 40px;
-    outline: 5px solid ${Theme.color.border};
+    border: 0.5px solid ${Theme.color.border};
     object-fit: cover;
 `
 
