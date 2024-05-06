@@ -51,17 +51,17 @@ const Description = styled.p`
 `;
 
 const ImageWrapper = styled.div`
-    margin: 0 0 0 90px;
+  margin: 0 0 0 90px;
+  display: inline-block;
 `;
 
 const Image = styled.img`
-    border-radius: 50px 0;
-    width: 380px;
-    height: 450px;
-    border: 3px solid;
-    border-image-source: ${Theme.color.gradient};
-    border-image-slice: 100;
-    border-image-width: 100%;
-    border-image-repeat: stretch;
-    object-fit: cover;
-`
+  border-radius: 50px 0;
+  width: 380px;
+  height: 450px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  background: ${Theme.color.gradient};
+  background-clip: padding-box;
+  padding: 3px;
+`;
