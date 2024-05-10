@@ -14,9 +14,30 @@ export const Link = (props: LinkPropsType) => {
 };
 
 const StyledLink = styled.a`
+    position: relative;
     background: ${Theme.color.gradient};
     padding: 15px 66px;
     font-weight: 600;
     font-size: 20px;
     border-radius: 83px;
-`
+    z-index: 9999;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: ${Theme.color.secondHoverColor};
+        border-radius: 83px;
+        z-index: -99999;
+    }
+
+    &:hover {
+        &:before {
+            width: 100%;
+        }
+    }
+`;
