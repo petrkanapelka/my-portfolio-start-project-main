@@ -30,10 +30,18 @@ export const Experience = () => {
     const [expYearWidth, setExpYearWidth] = useState<number | null>(null);
 
     useEffect(() => {
-        if (expYearRef.current) {
-            const width = expYearRef.current.getBoundingClientRect().width;
-            setExpYearWidth(width);
-        }
+        const handleResize = () => {
+            if (expYearRef.current) {
+                const width = expYearRef.current.getBoundingClientRect().width;
+                setExpYearWidth(width);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const beforeWidth = ExpYears.length * (expYearWidth || 0);
