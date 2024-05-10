@@ -1,4 +1,5 @@
 import './App.css';
+import { Footer } from './layouts/footer/Footer';
 import { Header } from './layouts/header/Header';
 import { Main } from './layouts/main/Main';
 import { Contact } from './layouts/sections/contact/Contact';
@@ -16,6 +17,7 @@ function App() {
             <Technologies />
             <Experience />
             <Contact />
+            <Footer />
         </div>
     );
 }
