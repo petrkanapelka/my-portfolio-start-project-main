@@ -5,7 +5,7 @@ import { Icon } from '../icon/Icon';
 export const Logo = () => {
     return (
         <StyledLogo href='#'>
-            <Icon iconId='logo'/>
+            <Icon iconId='logo'width='47px' height='47px' viewbox='0 0 47px 47px'/>
             <LogoTitle>Portfolio</LogoTitle>
         </StyledLogo>
     );
