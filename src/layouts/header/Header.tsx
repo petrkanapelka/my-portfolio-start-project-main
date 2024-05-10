@@ -17,9 +17,11 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <Logo/>
-                <HeaderMenu menuItems={navItems}/>
-                <SocialMenu iconsId={socialItems.inconsID} socialLinks={socialItems.socialLinks}/>
+                <Logo />
+                <HeaderMenu menuItems={navItems} />
+                <SocialMenu iconsId={socialItems.inconsID}
+                    socialLinks={socialItems.socialLinks}
+                    width='32px' height='32px' viewbox='0 0 32 32' />
             </Container>
         </StyledHeader>
     );
