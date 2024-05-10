@@ -4,6 +4,7 @@ import { SocialMenu } from '../../components/socialMenu/SocialMenu';
 import { socialItems } from '../header/Header';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/Flexwrapper';
+import { Theme } from '../../styles/Theme';
 
 export const Footer = () => {
     return (
@@ -33,4 +34,10 @@ const FooterLink = styled.a`
     display: inline-block;
     font-weight: 600;
     font-size: 22px;
+    position: relative;
+
+    &:hover {
+        color: ${Theme.color.firstHoverColor};
+        transform: translateY(-4px);
+    }
 `
