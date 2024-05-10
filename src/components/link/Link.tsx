@@ -9,7 +9,7 @@ type LinkPropsType = {
 
 export const Link = (props: LinkPropsType) => {
     return (
-        <StyledLink href={props.url}>{props.content}</StyledLink>
+        <StyledLink href={props.url} target="_blank">{props.content}</StyledLink>
     );
 };
 
