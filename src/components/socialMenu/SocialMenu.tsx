@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
+import { Theme } from "../../styles/Theme";
 
 type SocialItemsPropsType = {
     iconsId: Array<string>,
@@ -14,9 +15,9 @@ export const SocialMenu = (props: SocialItemsPropsType) => {
         <StyledHeaderMenu>
             <List>
                 {props.iconsId.map((item, index) => {
-                return <ListItem key={index}>
+                    return <ListItem key={index}>
                         <Link href={props.socialLinks[index]} target="_blank">
-                            <Icon iconId={item} width={props.width} height={props.height} viewbox={props.viewbox}/>
+                            <Icon iconId={item} width={props.width} height={props.height} viewbox={props.viewbox} />
                         </Link>
                     </ListItem>
                 })}
@@ -32,6 +33,13 @@ const List = styled.ul`
     gap: 25px;
 `;
 
-const ListItem = styled.li``;
+const ListItem = styled.li`
+`;
 
-const Link = styled.a``;
+const Link = styled.a`
+    display: inline-block;
+    &:hover {
+        color: ${Theme.color.firstHoverColor};
+        transform: scale(1.2);
+    }
+`;
