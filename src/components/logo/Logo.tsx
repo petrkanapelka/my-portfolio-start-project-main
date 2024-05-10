@@ -15,6 +15,10 @@ const StyledLogo = styled.a`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:hover {
+        color: #13adc7;
+    }
 `;
 
 const LogoTitle = styled.span`
