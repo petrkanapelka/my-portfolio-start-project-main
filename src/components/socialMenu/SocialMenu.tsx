@@ -4,6 +4,9 @@ import { Icon } from "../icon/Icon";
 type SocialItemsPropsType = {
     iconsId: Array<string>,
     socialLinks: Array<string>,
+    width?: string,
+    height?: string,
+    viewbox?: string
 }
 
 export const SocialMenu = (props: SocialItemsPropsType) => {
@@ -12,8 +15,8 @@ export const SocialMenu = (props: SocialItemsPropsType) => {
             <List>
                 {props.iconsId.map((item, index) => {
                 return <ListItem key={index}>
-                        <Link href={props.socialLinks[index]}>
-                            <Icon iconId={item} width="35px" height="35px" viewport="0 0 35 35"/>
+                        <Link href={props.socialLinks[index]} target="_blank">
+                            <Icon iconId={item} width={props.width} height={props.height} viewbox={props.viewbox}/>
                         </Link>
                     </ListItem>
                 })}
