@@ -7,7 +7,7 @@ export const Contact: React.FC = () => {
     return (
         <S.Contact>
             <Container>
-                <SectionTitle>Contact</SectionTitle>
+                <SectionTitle>Contact me</SectionTitle>
                 <S.Form>
                     <S.Field placeholder='Name' />
                     <S.Field placeholder='Lastname' />
