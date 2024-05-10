@@ -9,7 +9,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         transition: all 0.2s ease;
-        // background-color: ${Theme.color.mainBG};
     }
     body {
         margin: 0;
