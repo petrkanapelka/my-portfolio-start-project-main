@@ -41,9 +41,9 @@ export const Technologies = () => {
                 </FlexWrapper>
                 <AdditionalTitle>Additional technologies and skills</AdditionalTitle>
                 <FlexWrapper justify='center' className='IconWrapper'>
-                    <Icon iconId={'git'} width='100px' height='100px' viewport='0 0 100 100'/>
-                    <Icon iconId={'github2'} width='100px' height='100px' viewport='0 0 100 100'/>
-                    <Icon iconId={'figma'} width='100px' height='100px' viewport='0 0 100 100'/>
+                    <Icon iconId={'git'} width='100px' height='100px' viewbox='0 0 100 100'/>
+                    <Icon iconId={'github2'} width='100px' height='100px' viewbox='0 0 100 100'/>
+                    <Icon iconId={'figma'} width='100px' height='100px' viewbox='0 0 100 100'/>
                 </FlexWrapper>
             </Container>
         </StyledTechnologies>
