@@ -12,7 +12,7 @@ type SocialItemsPropsType = {
 
 export const SocialMenu = (props: SocialItemsPropsType) => {
     return (
-        <StyledHeaderMenu>
+        <StyledSocialMenu>
             <List>
                 {props.iconsId.map((item, index) => {
                     return <ListItem key={index}>
@@ -22,11 +22,15 @@ export const SocialMenu = (props: SocialItemsPropsType) => {
                     </ListItem>
                 })}
             </List>
-        </StyledHeaderMenu>
+        </StyledSocialMenu>
     );
 };
 
-const StyledHeaderMenu = styled.nav``;
+const StyledSocialMenu = styled.nav`
+    /* @media ${Theme.media.largeTablet} {
+        flex-grow: 1;
+    } */
+`;
 
 const List = styled.ul`
     display: flex;
