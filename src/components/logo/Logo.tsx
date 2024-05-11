@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
+import { Theme } from '../../styles/Theme';
 
 export const Logo = () => {
     return (
         <StyledLogo href='#'>
-            <Icon iconId='logo'width='47px' height='47px' viewbox='0 0 47px 47px'/>
+            <Icon iconId='logo' width='47px' height='47px' viewbox='0 0 47px 47px' />
             <LogoTitle>Portfolio</LogoTitle>
         </StyledLogo>
     );
@@ -13,11 +14,16 @@ export const Logo = () => {
 
 const StyledLogo = styled.a`
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-grow:1;
+    gap: 12px;
 
     &:hover {
         color: #13adc7;
+    }
+
+    @media ${Theme.media.largeTablet} {
+        align-self: flex-start;
     }
 `;
 
