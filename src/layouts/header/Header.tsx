@@ -1,12 +1,11 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Logo } from '../../components/logo/Logo';
-import { HeaderMenu } from './headerMenu/HeaderMenu';
-import { SocialMenu } from '../../components/socialMenu/SocialMenu';
 import { Container } from '../../components/Container';
 import { Theme } from '../../styles/Theme';
+import { FlexWrapper } from '../../components/Flexwrapper';
+import { Menu } from './menu/Menu';
+import { BurgerMenu } from './menu/burgerMenu/BurgerMenu';
 
-const navItems = ['Home', 'Projects', 'Technologies', 'About me', 'Contact me'];
 
 export const socialItems = {
     inconsID: ['github', 'linkedin', 'telegram'],
@@ -17,11 +16,11 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <Logo />
-                <HeaderMenu menuItems={navItems} />
-                <SocialMenu iconsId={socialItems.inconsID}
-                    socialLinks={socialItems.socialLinks}
-                    width='32px' height='32px' viewbox='0 0 32 32' />
+                <FlexWrapper justify='space-between' alignItems='center'>
+                    <Logo />
+                    <Menu isOpen={false} />
+                    <BurgerMenu isOpen={false}  />
+                </FlexWrapper>
             </Container>
         </StyledHeader>
     );
@@ -33,9 +32,15 @@ const StyledHeader = styled.header`
     align-items: center;
     padding: 34px 0;
     background-color: ${Theme.color.secondBG};
-    ${Container} {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+    @media ${Theme.media.largeTablet} {
+        ${FlexWrapper} {
+            flex-direction: column;
+        }
+    }
+
+    @media ${Theme.media.tablet} {
+        position: relative;
+        padding: 10px 0;
     }
 `;
