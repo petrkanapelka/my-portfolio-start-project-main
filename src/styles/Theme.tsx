@@ -9,5 +9,11 @@ export const Theme = {
         placeholderColor:  '#495057',
         firstHoverColor: "#13adc7",
         secondHoverColor: "#945dd6",
+    },
+
+    media: {
+        largeTablet: 'screen and (max-width: 992px)',
+        tablet: 'screen and (max-width: 768px)',
+        mobile: 'screen and (max-width: 576px)'
     }
 }
