@@ -5,6 +5,7 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/Flexwrapper';
 import { Technology } from './technology/Technology';
 import { Icon } from '../../../components/icon/Icon';
+import { Theme } from '../../../styles/Theme';
 
 const myTechnologies = [
     {
@@ -34,7 +35,7 @@ export const Technologies = () => {
         <StyledTechnologies>
             <Container>
                 <SectionTitle>Technologies</SectionTitle>
-                <FlexWrapper flexDirection='column' justify='center' alignItems='center'>
+                <FlexWrapper flexDirection='column' justify='center' alignItems='stretch'>
                     {myTechnologies.map((element, index) => {
                         return <Technology key={index} techName={element.techName} techSkill={element.techSkill}/>
                     })}
@@ -55,11 +56,25 @@ const StyledTechnologies = styled.section`
     ${Container} .IconWrapper {
         gap: 50px;
     }
+
+    ${FlexWrapper} {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @media ${Theme.media.tablet} {
+        padding: 50px 0 50px;
+    }
 `
 
 const AdditionalTitle = styled.h4`
     font-weight: 600;
-    font-size: 44px;
+    font-size: calc( (100vw - 360px)/(1440 - 360) * (46 - 28) + 28px);
     text-align: center;
     padding: 120px 0 70px;
+
+    @media ${Theme.media.tablet} {
+        padding: 80px 0 40px;
+    }
 `
