@@ -17,6 +17,8 @@ export const Technology = (props: TechnologyPropsType) => {
 
 const StyledTechnology = styled.div`
     margin-bottom: 25px;
+    max-width: 900px;
+    width: 100%;
 `
 
 const TechName = styled.h3`
@@ -31,8 +33,8 @@ type TechSkilPropsType = {
 
 const TechSkill = styled.div<TechSkilPropsType>`
     border-radius: 83px;
-    width: 900px;
-    // width: 100%;
+    max-width: 900px;
+    width: 100%;
     height: 18px;
     background-color: #162950;
     position: relative;
