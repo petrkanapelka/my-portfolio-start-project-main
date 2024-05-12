@@ -5,7 +5,7 @@ import Plants from '../../../assets/images/plants.webp';
 
 const Lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
 
-export const ProjectProps = [
+export const ProjectData = [
     {
         srcImg: CSSDiner,
         altImg: 'CSS Diner Game',
