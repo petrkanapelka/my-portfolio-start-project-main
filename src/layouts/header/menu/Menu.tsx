@@ -23,16 +23,23 @@ const StyledMenu = styled.div<{ isOpen: Boolean }>`
     justify-content: space-between;
     align-items: center;
     flex-grow:1;
+    position: relative;
+    top: 0px;
+    transform: scaleY(1);
+    transform-origin: top center;
+    opacity: 1;
 
     @media ${Theme.media.largeTablet} {
         width: 100%;
     }
 
     @media ${Theme.media.tablet} {
-        transform: scale(${({ isOpen }) => isOpen ? 1 : 0});
-        height: (${({ isOpen }) => isOpen ? 'auto' : 0});
+        position: ${({ isOpen }) => isOpen ? 'relative' : 'absolute'};
+        top: ${({ isOpen }) => isOpen ? '0px' : '73px'};
+        transform: scaleY(${({ isOpen }) => isOpen ? 1 : 0});
+        opacity: ${({ isOpen }) => isOpen ? 1 : 0};
         flex-direction: column;
         gap: 20px;
-        display: ${({ isOpen }) => isOpen ? 'flex' : 'none'};
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
-`
+    `
