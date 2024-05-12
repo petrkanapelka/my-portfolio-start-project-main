@@ -27,9 +27,6 @@ export const SocialMenu = (props: SocialItemsPropsType) => {
 };
 
 const StyledSocialMenu = styled.nav`
-    /* @media ${Theme.media.largeTablet} {
-        flex-grow: 1;
-    } */
 `;
 
 const List = styled.ul`
