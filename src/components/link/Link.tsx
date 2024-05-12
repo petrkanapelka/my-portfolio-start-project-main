@@ -18,7 +18,7 @@ const StyledLink = styled.a`
     background: ${Theme.color.gradient};
     padding: 15px 66px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: calc( (100vw - 360px)/(1440 - 360) * (20 - 16) + 16px);
     border-radius: 83px;
     z-index: 9999;
     overflow: hidden;
