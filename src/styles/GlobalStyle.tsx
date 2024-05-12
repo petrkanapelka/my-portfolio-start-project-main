@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         transition: all 0.2s ease;
-        border: 1px solid rgba(248, 106, 106, 0.252);
+        /* border: 1px solid rgba(248, 106, 106, 0.252); */
     }
     body {
         margin: 0;
@@ -19,6 +19,11 @@ export const GlobalStyle = createGlobalStyle`
         color: ${Theme.color.font};
         overflow-x: hidden;
         min-width: 360px;
+        background-color: chartreuse;
+    }
+
+    html, body {
+      overflow-x: hidden;
     }
 
     code {
