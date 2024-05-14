@@ -1,7 +1,7 @@
 import './App.css';
 import { Footer } from './layouts/footer/Footer';
 import { Header } from './layouts/header/Header';
-import { Main } from './layouts/main/Main';
+import { Main } from './layouts/sections/main/Main';
 import { Contact } from './layouts/sections/contact/Contact';
 import { Experience } from './layouts/sections/experience/Experience';
 import { Projects } from './layouts/sections/projects/Projects';
