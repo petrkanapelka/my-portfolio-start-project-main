@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FlexWrapper } from '../../components/Flexwrapper';
-import Photo from '../../assets/images/photo.webp'
-import { Theme } from '../../styles/Theme';
-import { Container } from '../../components/Container';
-import { Link } from '../../components/link/Link';
-import { encodedSVG } from '../../assets/icons/frame';
+import { FlexWrapper } from '../../../components/Flexwrapper';
+import Photo from '../../../assets/images/photo.webp'
+import { Theme } from '../../../styles/Theme';
+import { Container } from '../../../components/Container';
+import { Link } from '../../../components/link/Link';
+import { encodedSVG } from '../../../assets/icons/frame';
 
 export const Main = () => {
     return (
