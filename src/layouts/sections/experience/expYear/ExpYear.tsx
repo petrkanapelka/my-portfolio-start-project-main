@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Theme } from '../../../../styles/Theme';
 
 type ExpYearPropsType = {
     year: number;
@@ -21,6 +22,26 @@ const StyledExpYear = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+
+    @media ${Theme.media.tablet} {
+        display: none;
+
+        &:nth-child(1) {
+            display: flex;
+        }
+
+        &:nth-child(2) {
+            display: flex;
+        }
+    }
+
+    @media ${Theme.media.mobile} {
+        display: none;
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
 `
 
 const Year = styled.h3`
