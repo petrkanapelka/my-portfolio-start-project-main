@@ -4,6 +4,7 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/Flexwrapper';
 import { ExpYear } from './expYear/ExpYear';
+import { Theme } from '../../../styles/Theme';
 
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor t ut labore et dolore magna aliqua.'
 
@@ -86,6 +87,18 @@ const StyledExperience = styled.section<{ beforeWidth: number }>`
             top: 40px;
             left: 50%;
             transform: translateX(-50%);
+
+            @media ${Theme.media.tablet} {
+                max-width: 50%;
+            }
+
+            @media ${Theme.media.mobile} {
+                max-width: 100%;
+            }
         }
+    }
+
+    @media ${Theme.media.tablet} {
+        padding: 50px 0 50px;
     }
 `;
