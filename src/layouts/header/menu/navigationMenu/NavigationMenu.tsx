@@ -1,65 +1,20 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
-import styled from 'styled-components';
-import { Theme } from '../../../../styles/Theme';
+import { S } from '../Menu_Styles';
 
 type ListItemsPropsType = {
     menuItems: Array<string>
 }
 
-export const NavigationMenu = (props: ListItemsPropsType) => {
+export const NavigationMenu:React.FC<ListItemsPropsType> = (props: ListItemsPropsType) => {
     return (
-        <StyledNavigationMenu>
-            <List>
+        <S.NavigationMenu>
+            <S.List>
                 {props.menuItems.map((item, index) => {
-                    return <ListItem key={index}>
-                        <Link href='#'>{item}</Link>
-                    </ListItem>
+                    return <S.ListItem key={index}>
+                        <S.Link href='#'>{item}</S.Link>
+                    </S.ListItem>
                 })}
-            </List>
-        </StyledNavigationMenu>
+            </S.List>
+        </S.NavigationMenu>
     );
 };
-
-const StyledNavigationMenu = styled.nav`
-`;
-
-const List = styled.ul`
-    display: flex;
-    gap: 25px;
-
-    @media ${Theme.media.tablet} {
-        flex-direction: column;
-        align-items: center;
-    }
-`;
-
-const ListItem = styled.li``;
-
-const Link = styled.a`
-    position: relative;
-
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: -3px;
-        width: 0;
-        height: 3px;
-        background-color: ${Theme.color.secondHoverColor};
-        transition: width 0.5s;
-    }
-
-    &:hover:after {
-        width: 100%;
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        height: 3px;
-        background-color: ${Theme.color.firstHoverColor};
-        transition: width 0.5s;
-    }
-`;
