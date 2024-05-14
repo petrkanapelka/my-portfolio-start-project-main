@@ -19,7 +19,6 @@ export const GlobalStyle = createGlobalStyle`
         color: ${Theme.color.font};
         overflow-x: hidden;
         min-width: 360px;
-        background-color: chartreuse;
     }
 
     html, body {
