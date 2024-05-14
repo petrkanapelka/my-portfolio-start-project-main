@@ -36,7 +36,7 @@ const StyledMain = styled.section`
         gap:30px;
 
         @media ${Theme.media.tablet} {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
     }
     ${FlexWrapper} {
