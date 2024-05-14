@@ -1,6 +1,11 @@
-import styled from "styled-components";
+import React from "react";
 import { Icon } from "../icon/Icon";
-import { Theme } from "../../styles/Theme";
+import { S } from "./SocialMenu_Styles";
+
+export const socialItems = {
+    inconsID: ['github', 'linkedin', 'telegram'],
+    socialLinks: ['https://github.com/petrkanapelka', 'https://www.linkedin.com/', 'https://telegram.org/desktop']
+}
 
 type SocialItemsPropsType = {
     iconsId: Array<string>,
@@ -10,37 +15,18 @@ type SocialItemsPropsType = {
     viewbox?: string
 }
 
-export const SocialMenu = (props: SocialItemsPropsType) => {
+export const SocialMenu: React.FC<SocialItemsPropsType> = (props: SocialItemsPropsType) => {
     return (
-        <StyledSocialMenu>
-            <List>
+        <S.SocialMenu>
+            <S.List>
                 {props.iconsId.map((item, index) => {
-                    return <ListItem key={index}>
-                        <Link href={props.socialLinks[index]} target="_blank">
+                    return <S.ListItem key={index}>
+                        <S.Link href={props.socialLinks[index]} target="_blank">
                             <Icon iconId={item} width={props.width} height={props.height} viewbox={props.viewbox} />
-                        </Link>
-                    </ListItem>
+                        </S.Link>
+                    </S.ListItem>
                 })}
-            </List>
-        </StyledSocialMenu>
+            </S.List>
+        </S.SocialMenu>
     );
 };
-
-const StyledSocialMenu = styled.nav`
-`;
-
-const List = styled.ul`
-    display: flex;
-    gap: 25px;
-`;
-
-const ListItem = styled.li`
-`;
-
-const Link = styled.a`
-    display: inline-block;
-    &:hover {
-        color: ${Theme.color.firstHoverColor};
-        transform: scale(1.2);
-    }
-`;
