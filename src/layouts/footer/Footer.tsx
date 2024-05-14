@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SocialMenu } from '../../components/socialMenu/SocialMenu';
-import { socialItems } from '../header/Header';
+import { SocialMenu, socialItems } from '../../components/socialMenu/SocialMenu';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/Flexwrapper';
 import { Theme } from '../../styles/Theme';
