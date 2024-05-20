@@ -6,11 +6,13 @@ import { Contact } from './layouts/sections/contact/Contact';
 import { Experience } from './layouts/sections/experience/Experience';
 import { Projects } from './layouts/sections/projects/Projects';
 import { Technologies } from './layouts/sections/technologies/Technologies';
+import { Particle } from './components/Particle';
 
 
 function App() {
     return (
         <div className="App">
+            <Particle/>
             <Header />
             <Main />
             <Projects />
