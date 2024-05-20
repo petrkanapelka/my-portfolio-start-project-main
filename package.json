@@ -33,6 +33,7 @@
     "file-loader": "6.2.0",
     "framer-motion": "^11.2.4",
     "fs-extra": "10.0.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "5.5.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.4.3",
@@ -77,8 +78,12 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "clean": "gh-pages-clean"
   },
+  "homepage": "https://petrkanapelka.github.io/my-portfolio-start-project-main/",
   "eslintConfig": {
     "extends": [
       "react-app",
