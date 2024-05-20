@@ -11,13 +11,20 @@ export const Header: React.FC = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     }
+
+    const closeMenu = () => {
+        if (isOpen) {
+            setIsOpen(false);
+        }
+    }
+
     return (
         <S.Header>
             <Container>
                 <FlexWrapper justify='space-between' alignItems='center'>
                     <Logo />
-                    <Menu isOpen={isOpen} />
-                    <BurgerMenu isOpen={isOpen} toggleMenu={toggleMenu}/>
+                    <Menu isOpen={isOpen} toggleMenu={closeMenu} />
+                    <BurgerMenu isOpen={isOpen} toggleMenu={toggleMenu} />
                 </FlexWrapper>
             </Container>
         </S.Header>
