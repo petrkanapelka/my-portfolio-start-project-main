@@ -1,18 +1,36 @@
 import React from 'react';
 import { S } from '../Menu_Styles';
 
-type ListItemsPropsType = {
-    menuItems: Array<string>
+type ItemPropsType = {
+    title: string;
+    linkID: string;
 }
 
-export const NavigationMenu:React.FC<ListItemsPropsType> = (props: ListItemsPropsType) => {
+type ListItemsPropsType = {
+    menuItems: Array<ItemPropsType>;
+    toggleMenu: () => void;
+}
+
+export const NavigationMenu: React.FC<ListItemsPropsType> = ({ menuItems, toggleMenu }) => {
     return (
         <S.NavigationMenu>
             <S.List>
-                {props.menuItems.map((item, index) => {
-                    return <S.ListItem key={index}>
-                        <S.Link href='#'>{item}</S.Link>
-                    </S.ListItem>
+                {menuItems.map((item, index) => {
+                    return (
+                        <S.ListItem key={index}>
+                            <S.NavLink
+                                activeClass="active"
+                                to={item.linkID}
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={1000}
+                                onClick={toggleMenu}
+                            >
+                                {item.title}
+                            </S.NavLink>
+                        </S.ListItem>
+                    );
                 })}
             </S.List>
         </S.NavigationMenu>
