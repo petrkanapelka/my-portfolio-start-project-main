@@ -34,6 +34,8 @@ const Main = styled.section`
 `;
 
 const Name = styled.h2`
+  position: relative;
+  z-index: 1;
   font-weight: 600;
   font-size: calc((100vw - 360px) / (1440 - 360) * (54 - 36) + 36px);
 `;
@@ -41,6 +43,8 @@ const Name = styled.h2`
 const MainSlogan = styled.h1`
   font-weight: 600;
   font-size: calc((100vw - 360px) / (1440 - 360) * (46 - 28) + 28px);
+  position: relative;
+  z-index: 1;
 `;
 
 const Description = styled.p`
@@ -48,6 +52,8 @@ const Description = styled.p`
   font-weight: 500;
   font-size: 18px;
   color: #bcbcbc;
+  position: relative;
+  z-index: 1;
 
   @media ${Theme.media.tablet} {
     text-align: center;
@@ -61,6 +67,7 @@ const ImageWrapper = styled.div`
   display: inline-block;
   position: relative;
   flex-shrink: 1;
+  z-index: 99999;
 
   @media ${Theme.media.mobile} {
     transform: scale(0.8);
@@ -69,16 +76,16 @@ const ImageWrapper = styled.div`
   &::before {
     content: "";
     display: inline-block;
-    width: 666px;
-    height: 666px;
+    width: 630px;
+    height: 630px;
     background-image: url("data:image/svg+xml,${encodedSVG}");
     background-size: cover;
     transform: rotate(-180deg);
 
     position: absolute;
     left: 2px;
-    top: 70px;
-    z-index: 1;
+    top: 0px;
+    z-index: 999;
 
     @media ${Theme.media.tablet} {
       top: 0;
@@ -98,7 +105,36 @@ const Image = styled.img`
   background-clip: padding-box;
   padding: 3px;
   position: relative;
-  z-index: 2;
+  z-index: 9999;
 `;
 
-export const S = { Main, Name, MainSlogan, Description, ImageWrapper, Image };
+const ButtonLink = styled.button`
+  position: relative;
+    background: ${Theme.color.gradient};
+    padding: 15px 66px;
+    font-weight: 600;
+    font-size: calc( (100vw - 360px)/(1440 - 360) * (20 - 16) + 16px);
+    border-radius: 83px;
+    z-index: 9999;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: ${Theme.color.secondHoverColor};
+        border-radius: 83px;
+        z-index: -99999;
+    }
+
+    &:hover {
+        &:before {
+            width: 100%;
+        }
+    }
+`;
+
+export const S = { Main, Name, MainSlogan, Description, ImageWrapper, Image, ButtonLink };

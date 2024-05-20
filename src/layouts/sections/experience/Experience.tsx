@@ -69,7 +69,7 @@ export const Experience: React.FC = () => {
     const expYearRef = useRef<HTMLDivElement>(null);
 
     return (
-        <S.Experience beforeWidth={beforeWidth}>
+        <S.Experience beforeWidth={beforeWidth} id='experience'>
             <Container>
                 <SectionTitle>Experience</SectionTitle>
                 <AliceCarousel  mouseTracking

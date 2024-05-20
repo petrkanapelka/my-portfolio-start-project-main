@@ -4,6 +4,7 @@ import { ExpYears } from "./Experience";
 
 const Experience = styled.section<{ beforeWidth: number }>`
   padding: 100px 0 140px;
+  position: relative;
 
   .alice-carousel {
     position: relative;

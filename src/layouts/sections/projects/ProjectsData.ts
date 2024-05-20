@@ -13,14 +13,8 @@ export const ProjectData = [
         projectDescr: Lorem,
         projectLink: 'https://rolling-scopes-school.github.io/petrkanapelka-JSFE2023Q1/rs-css/',
         projectLinkContent: 'Look It Up',
-    },
-    {
-        srcImg: Minesweeper,
-        altImg: 'Minesweeper',
-        projectTitle: 'Minesweeper',
-        projectDescr: Lorem,
-        projectLink: 'https://rolling-scopes-school.github.io/petrkanapelka-JSFE2023Q1/minesweeper/',
-        projectLinkContent: 'Look It Up',
+        type: 'ts',
+        id: 0
     },
     {
         srcImg: Shelter,
@@ -29,6 +23,18 @@ export const ProjectData = [
         projectDescr: Lorem,
         projectLink: 'https://rolling-scopes-school.github.io/petrkanapelka-JSFE2023Q1/shelter/index.html',
         projectLinkContent: 'Look It Up',
+        type: 'js',
+        id: 1
+    },
+    {
+        srcImg: Minesweeper,
+        altImg: 'Minesweeper',
+        projectTitle: 'Minesweeper',
+        projectDescr: Lorem,
+        projectLink: 'https://rolling-scopes-school.github.io/petrkanapelka-JSFE2023Q1/minesweeper/',
+        projectLinkContent: 'Look It Up',
+        type: 'ts',
+        id: 2
     },
     {
         srcImg: Plants,
@@ -37,5 +43,7 @@ export const ProjectData = [
         projectDescr: Lorem,
         projectLink: 'https://rolling-scopes-school.github.io/petrkanapelka-JSFEPRESCHOOL2022Q4/plants/',
         projectLinkContent: 'Look It Up',
+        type: 'js',
+        id: 3
     },
 ]

@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { FlexWrapper } from "../../../components/Flexwrapper";
 import { Theme } from "../../../styles/Theme";
 
-const Projects = styled.section`
+const Projects:any = styled.section`
+  position: relative;
   padding: 100px 0 80px;
-
+  z-index: 1;
   ${FlexWrapper} {
     gap: 10px;
   }
