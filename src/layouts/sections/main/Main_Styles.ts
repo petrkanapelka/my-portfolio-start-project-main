@@ -6,7 +6,7 @@ import { Theme } from "../../../styles/Theme";
 
 const Main = styled.section`
   display: flex;
-  padding: 125px 0;
+  padding: 180px 0;
 
   ${Container} {
     display: flex;
@@ -29,7 +29,7 @@ const Main = styled.section`
   }
 
   @media ${Theme.media.tablet} {
-    padding: 50px 0;
+    padding: 67px 0;
   }
 `;
 
