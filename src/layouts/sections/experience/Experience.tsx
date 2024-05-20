@@ -1,13 +1,26 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { Container } from '../../../components/Container';
-import { FlexWrapper } from '../../../components/Flexwrapper';
 import { ExpYear } from './expYear/ExpYear';
 import { S } from './Experience_Styles';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor t ut labore et dolore magna aliqua.'
 
 export const ExpYears = [
+    {
+        year: 2018,
+        descr: lorem
+    },
+    {
+        year: 2019,
+        descr: lorem
+    },
+    {
+        year: 2020,
+        descr: lorem
+    },
     {
         year: 2021,
         descr: lorem
@@ -25,6 +38,13 @@ export const ExpYears = [
         descr: lorem
     },
 ]
+
+const responsive = {
+    0: { items: 1 },
+    576: { items: 2 },
+    768: { items: 3 },
+    1024: { items: 4 },
+};
 
 export const Experience: React.FC = () => {
     const [expYearWidth, setExpYearWidth] = useState<number | null>(null);
@@ -52,7 +72,9 @@ export const Experience: React.FC = () => {
         <S.Experience beforeWidth={beforeWidth}>
             <Container>
                 <SectionTitle>Experience</SectionTitle>
-                <FlexWrapper>
+                <AliceCarousel  mouseTracking
+                                responsive={responsive}
+                                controlsStrategy="alternate">
                     {ExpYears.map((element, index) => {
                         return (
                             <ExpYear
@@ -63,8 +85,9 @@ export const Experience: React.FC = () => {
                             />
                         );
                     })}
-                </FlexWrapper>
+                </AliceCarousel>
             </Container>
         </S.Experience>
     );
 };
+

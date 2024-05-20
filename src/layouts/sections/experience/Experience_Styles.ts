@@ -1,20 +1,20 @@
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/Flexwrapper";
 import { Theme } from "../../../styles/Theme";
 import { ExpYears } from "./Experience";
 
 const Experience = styled.section<{ beforeWidth: number }>`
   padding: 100px 0 140px;
 
-  ${FlexWrapper} {
+  .alice-carousel {
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
       margin: 0 auto;
       border-radius: 83px;
-      max-width: ${(props) =>
-        props.beforeWidth - props.beforeWidth / ExpYears.length}px;
+      /*  max-width: ${(props) =>
+        props.beforeWidth - props.beforeWidth / ExpYears.length}px; */
       width: 100%;
       height: 8px;
       background: linear-gradient(
@@ -23,18 +23,15 @@ const Experience = styled.section<{ beforeWidth: number }>`
         #6978d1 66.67%,
         #945dd6 100%
       );
-      top: 40px;
+      top: 46px;
       left: 50%;
       transform: translateX(-50%);
-
-      @media ${Theme.media.tablet} {
-        max-width: 50%;
-      }
-
-      @media ${Theme.media.mobile} {
-        max-width: 100%;
-      }
     }
+  }
+
+  .alice-carousel__prev-btn,
+  .alice-carousel__next-btn {
+    display: none;
   }
 
   @media ${Theme.media.tablet} {
@@ -49,24 +46,12 @@ const ExpYear = styled.div`
   align-items: center;
   position: relative;
 
-  @media ${Theme.media.tablet} {
-    display: none;
-
-    &:nth-child(1) {
-      display: flex;
-    }
-
-    &:nth-child(2) {
-      display: flex;
-    }
+  &:hover {
+    cursor: grab;
   }
 
-  @media ${Theme.media.mobile} {
-    display: none;
-
-    &:nth-child(2) {
-      display: none;
-    }
+  &:active {
+    cursor: grabbing;
   }
 `;
 
