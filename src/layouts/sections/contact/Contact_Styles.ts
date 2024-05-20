@@ -3,6 +3,7 @@ import { Theme } from "../../../styles/Theme";
 
 const Contact = styled.section`
     padding: 100px 0 140px;
+    position: relative;
 
     @media ${Theme.media.tablet} {
         padding: 50px 0;
