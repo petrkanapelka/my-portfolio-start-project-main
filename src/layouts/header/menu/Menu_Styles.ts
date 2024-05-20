@@ -14,6 +14,7 @@ const Menu = styled.div<{ isOpen: Boolean }>`
 
   @media ${Theme.media.largeTablet} {
     width: 100%;
+    height: 100%;
   }
 
   @media ${Theme.media.tablet} {
@@ -21,9 +22,11 @@ const Menu = styled.div<{ isOpen: Boolean }>`
     top: ${({ isOpen }) => (isOpen ? "0px" : "73px")};
     transform: scaleY(${({ isOpen }) => (isOpen ? 1 : 0)});
     opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+    height: ${({ isOpen }) => (isOpen ? '100vh' : 0)};
     flex-direction: column;
     gap: 20px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    justify-content: space-around;
   }
 `;
 

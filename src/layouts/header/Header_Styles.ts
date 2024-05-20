@@ -8,6 +8,10 @@ const Header = styled.header`
     align-items: center;
     padding: 34px 0;
     background-color: ${Theme.color.secondBG};
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999999999;
 
     @media ${Theme.media.largeTablet} {
         ${FlexWrapper} {
@@ -16,8 +20,9 @@ const Header = styled.header`
     }
 
     @media ${Theme.media.tablet} {
-        position: relative;
+        position: fixed;
         padding: 10px 0;
+        background-color: rgba(22, 29, 42, 0.9);
     }
 `;
 
