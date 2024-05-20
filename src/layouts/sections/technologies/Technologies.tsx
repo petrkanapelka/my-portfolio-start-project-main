@@ -31,7 +31,7 @@ const myTechnologies = [
 
 export const Technologies: React.FC = () => {
     return (
-        <S.Technologies>
+        <S.Technologies id='technologies'>
             <Container>
                 <SectionTitle>Technologies</SectionTitle>
                 <FlexWrapper flexDirection='column' justify='center' alignItems='stretch'>
